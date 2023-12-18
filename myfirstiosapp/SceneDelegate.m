@@ -27,16 +27,9 @@
       UITabBarController *tabBarController =  [[UITabBarController alloc]init];
     
     NewsViewController *viewController = [[NewsViewController alloc]init];
-    viewController.tabBarItem.title = @"新闻";
-    viewController.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
-    viewController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
-    
+
         
     VideoViewController *videoController = [[VideoViewController alloc]init];
-    videoController.tabBarItem.title = @"视频";
-    videoController.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
-    videoController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/video_selected@2x.png"];
-
 
       UIViewController *uiViewController3 = [[UIViewController alloc]init];
         uiViewController3.view.backgroundColor = [UIColor greenColor];

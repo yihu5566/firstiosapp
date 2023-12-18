@@ -17,7 +17,9 @@
 {
     self = [super init];
     if (self) {
-        
+        self.tabBarItem.title = @"新闻";
+        self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
+        self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
     }
     return self;
 }
@@ -45,14 +47,33 @@
 
 // pargma mark - UITableViewDeleggate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 100;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+       UIViewController *viewCon= [[UIViewController alloc]init];
+        viewCon.view.backgroundColor =[UIColor whiteColor];
+        viewCon.navigationItem.title=[NSString stringWithFormat:@"我是标题-%@",@(indexPath.row)];
+        [self.navigationController pushViewController:viewCon animated:YES];
+}
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 20;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *tabViewCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
-    tabViewCell.textLabel.text=@"我是标题";
+    
+    UITableViewCell *tabViewCell=  [tableView dequeueReusableCellWithIdentifier:@"id"];
+    
+    if (!tabViewCell) {
+        tabViewCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+    }
+    
+    NSString *title= [NSString stringWithFormat:@"主题-%@", @(indexPath.row)];
+    tabViewCell.textLabel.text=title;
     tabViewCell.detailTextLabel.text=@"我是小标题";
     tabViewCell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
     return tabViewCell;
