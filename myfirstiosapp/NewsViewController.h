@@ -5,8 +5,10 @@
 //  Created by dongfang lu on 2023/12/18.
 //
 
-#ifndef NewsViewController_h
-#define NewsViewController_h
+#import <UIKit/UIKit.h>
+
+@interface NewsViewController : UIViewController
 
 
-#endif /* NewsViewController_h */
+@end
+

@@ -6,9 +6,10 @@
 //
 
 #import "SceneDelegate.h"
-#import "ViewController.h"
+#import "NewsViewController.h"
+#import "VideoViewController.h"
 
-@interface SceneDelegate ()
+@interface SceneDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -23,23 +24,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
           self.window.windowScene = (UIWindowScene*)scene;
          
-      UITabBarController *tabController =  [[UITabBarController alloc]init];
+      UITabBarController *tabBarController =  [[UITabBarController alloc]init];
     
-    ViewController *viewController = [[ViewController alloc]init];
-    
-    UINavigationController  *uiNavigationController1 =  [[UINavigationController alloc]initWithRootViewController:viewController];
-    
-//    uiNavigationController1.view.backgroundColor = [UIColor redColor];
-    uiNavigationController1.tabBarItem.title = @"新闻";
-    uiNavigationController1.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
-    uiNavigationController1.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
+    NewsViewController *viewController = [[NewsViewController alloc]init];
+    viewController.tabBarItem.title = @"新闻";
+    viewController.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
+    viewController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
     
         
-      UIViewController *uiViewController2 = [[UIViewController alloc]init];
-        uiViewController2.view.backgroundColor = [UIColor yellowColor];
-    uiViewController2.tabBarItem.title = @"视频";
-    uiViewController2.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
-    uiViewController2.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/video_selected@2x.png"];
+    VideoViewController *videoController = [[VideoViewController alloc]init];
+    videoController.tabBarItem.title = @"视频";
+    videoController.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
+    videoController.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/video_selected@2x.png"];
 
 
       UIViewController *uiViewController3 = [[UIViewController alloc]init];
@@ -56,9 +52,11 @@
     uiViewController4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
 
 
-        [tabController setViewControllers:@[uiNavigationController1,uiViewController2,uiViewController3,uiViewController4]];
-        
-      self.window.rootViewController = tabController;
+        [tabBarController setViewControllers:@[viewController,videoController,uiViewController3,uiViewController4]];
+    
+    UINavigationController  *uiNavigationController1 =  [[UINavigationController alloc]initWithRootViewController:tabBarController];
+    
+      self.window.rootViewController = uiNavigationController1;
       
       [self.window makeKeyAndVisible];
 }
@@ -94,6 +92,10 @@
     // Called as the scene transitions from the foreground to the background.
     // Use this method to save data, release shared resources, and store enough scene-specific state information
     // to restore the scene back to its current state.
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
+    NSLog(@"didSelectViewController");
 }
 
 
