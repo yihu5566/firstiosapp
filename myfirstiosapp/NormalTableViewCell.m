@@ -60,13 +60,20 @@
             self.newsImageView;
         })];
         [self.contentView addSubview:({
-            self.deleteButton = [[UIButton alloc]initWithFrame:CGRectMake(150,80, 70, 70)];
-            self.deleteButton.backgroundColor = [UIColor grayColor];
+            self.deleteButton = [[UIButton alloc]initWithFrame:CGRectMake(280,80, 20, 20)];
+//            self.deleteButton.backgroundColor = [UIColor blueColor];
+            [self.deleteButton setTitle:@"x" forState:UIControlStateNormal];
+            [self.deleteButton setTitle:@"v" forState:UIControlStateHighlighted];
+            [self.deleteButton addTarget:self action:@selector(deleteButtonClick) forControlEvents:UIControlEventTouchUpInside];
             self.deleteButton;
         })];
         
     }
     return self;
+}
+
+-(void)deleteButtonClick{
+    NSLog(@"deleteButtonClick");
 }
 
 -(void) layoutTableViewCell{
@@ -95,15 +102,6 @@
 
 }
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 @end
