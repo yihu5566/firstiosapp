@@ -6,6 +6,7 @@
 //
 
 #import "NewsViewController.h"
+#import "NormalTableViewCell.h"
 
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -66,16 +67,18 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *tabViewCell=  [tableView dequeueReusableCellWithIdentifier:@"id"];
+    NormalTableViewCell *tabViewCell=  [tableView dequeueReusableCellWithIdentifier:@"id"];
     
     if (!tabViewCell) {
-        tabViewCell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
+        tabViewCell = [[NormalTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
     }
     
-    NSString *title= [NSString stringWithFormat:@"主题-%@", @(indexPath.row)];
-    tabViewCell.textLabel.text=title;
-    tabViewCell.detailTextLabel.text=@"我是小标题";
-    tabViewCell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
+    [tabViewCell layoutTableViewCell];
+    
+//    NSString *title= [NSString stringWithFormat:@"主题-%@", @(indexPath.row)];
+//    tabViewCell.textLabel.text=title;
+//    tabViewCell.detailTextLabel.text=@"我是小标题";
+//    tabViewCell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
     return tabViewCell;
 }
 

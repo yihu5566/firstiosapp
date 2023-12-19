@@ -17,6 +17,7 @@
 		D6EBC7BD2B2FF87600A71CCF /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6EBC7BC2B2FF87600A71CCF /* icon.bundle */; };
 		D6EBC7C52B30250400A71CCF /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7C42B30250400A71CCF /* VideoViewController.m */; };
 		D6EBC7C92B30455A00A71CCF /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7C82B30455A00A71CCF /* RecommendViewController.m */; };
+		D6EBC7CD2B31331800A71CCF /* NormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7CC2B31331800A71CCF /* NormalTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		D6EBC7C62B30251A00A71CCF /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		D6EBC7C72B30455A00A71CCF /* RecommendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendViewController.h; sourceTree = "<group>"; };
 		D6EBC7C82B30455A00A71CCF /* RecommendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendViewController.m; sourceTree = "<group>"; };
+		D6EBC7CB2B31331800A71CCF /* NormalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalTableViewCell.h; sourceTree = "<group>"; };
+		D6EBC7CC2B31331800A71CCF /* NormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 			children = (
 				D6EBC7A82B2FF53D00A71CCF /* NewsViewController.h */,
 				D6EBC7A92B2FF53D00A71CCF /* NewsViewController.m */,
+				D6EBC7CB2B31331800A71CCF /* NormalTableViewCell.h */,
+				D6EBC7CC2B31331800A71CCF /* NormalTableViewCell.m */,
 			);
 			name = NewsController;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				D6EBC7B52B2FF53F00A71CCF /* main.m in Sources */,
 				D6EBC7A72B2FF53D00A71CCF /* SceneDelegate.m in Sources */,
 				D6EBC7C92B30455A00A71CCF /* RecommendViewController.m in Sources */,
+				D6EBC7CD2B31331800A71CCF /* NormalTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
