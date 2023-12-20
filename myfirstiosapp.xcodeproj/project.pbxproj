@@ -19,6 +19,7 @@
 		D6EBC7C92B30455A00A71CCF /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7C82B30455A00A71CCF /* RecommendViewController.m */; };
 		D6EBC7CD2B31331800A71CCF /* NormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7CC2B31331800A71CCF /* NormalTableViewCell.m */; };
 		D6EBC7E62B328B4600A71CCF /* NewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7E52B328B4600A71CCF /* NewsDetailsViewController.m */; };
+		D6EBC7E92B32C4BE00A71CCF /* DFDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		D6EBC7CC2B31331800A71CCF /* NormalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalTableViewCell.m; sourceTree = "<group>"; };
 		D6EBC7E42B328B4600A71CCF /* NewsDetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDetailsViewController.h; sourceTree = "<group>"; };
 		D6EBC7E52B328B4600A71CCF /* NewsDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailsViewController.m; sourceTree = "<group>"; };
+		D6EBC7E72B32C4BE00A71CCF /* DFDeleteCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFDeleteCellView.h; sourceTree = "<group>"; };
+		D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFDeleteCellView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				D6EBC7A92B2FF53D00A71CCF /* NewsViewController.m */,
 				D6EBC7CB2B31331800A71CCF /* NormalTableViewCell.h */,
 				D6EBC7CC2B31331800A71CCF /* NormalTableViewCell.m */,
+				D6EBC7E72B32C4BE00A71CCF /* DFDeleteCellView.h */,
+				D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */,
 			);
 			name = NewsController;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6EBC7E62B328B4600A71CCF /* NewsDetailsViewController.m in Sources */,
+				D6EBC7E92B32C4BE00A71CCF /* DFDeleteCellView.m in Sources */,
 				D6EBC7C52B30250400A71CCF /* VideoViewController.m in Sources */,
 				D6EBC7AA2B2FF53D00A71CCF /* NewsViewController.m in Sources */,
 				D6EBC7A42B2FF53D00A71CCF /* AppDelegate.m in Sources */,

@@ -9,7 +9,7 @@
 #import "NormalTableViewCell.h"
 #import "NewsDetailsViewController.h"
 
-@interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource,NormaleTableViewCellDelegate>
 
 @end
 
@@ -71,6 +71,7 @@
     if (!tabViewCell) {
         tabViewCell = [[NormalTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"id"];
     }
+    tabViewCell.delegate =self;
     
     [tabViewCell layoutTableViewCell];
     
@@ -79,6 +80,12 @@
 //    tabViewCell.detailTextLabel.text=@"我是小标题";
 //    tabViewCell.imageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
     return tabViewCell;
+}
+
+
+-(void)tabViewCell:(UITableViewCell *) tabViewCell clickDeleteButton:(UIButton *) deleteButton{
+    NSLog(@"click deletebutton");
+    //打开全局浮窗
 }
 
 

@@ -73,7 +73,10 @@
 }
 
 -(void)deleteButtonClick{
-    NSLog(@"deleteButtonClick");
+//    NSLog(@"deleteButtonClick");
+    if(self.delegate&&[self.delegate respondsToSelector:@selector(tabViewCell:clickDeleteButton:)]){
+        [self.delegate tabViewCell:self clickDeleteButton:self.deleteButton];
+    }
 }
 
 -(void) layoutTableViewCell{
