@@ -7,6 +7,7 @@
 
 #import "NewsViewController.h"
 #import "NormalTableViewCell.h"
+#import "NewsDetailsViewController.h"
 
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -35,8 +36,6 @@
     uiTabView.delegate = self;
     [self.view addSubview:uiTabView];
 
-    
-    
 //    UIView *view1 = [[UIView alloc]init];
 //    view1.frame = CGRectMake(100, 100, 100, 100);
 //    view1.backgroundColor = [UIColor greenColor];
@@ -53,7 +52,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-       UIViewController *viewCon= [[UIViewController alloc]init];
+    NewsDetailsViewController *viewCon= [[NewsDetailsViewController alloc]init];
         viewCon.view.backgroundColor =[UIColor whiteColor];
         viewCon.navigationItem.title=[NSString stringWithFormat:@"我是标题-%@",@(indexPath.row)];
         [self.navigationController pushViewController:viewCon animated:YES];
