@@ -7,7 +7,13 @@
 
 #import "RecommendViewController.h"
 
-@interface RecommendViewController ()<UIScrollViewDelegate>
+@interface RecommendViewController ()<UIScrollViewDelegate,UIGestureRecognizerDelegate,UIAlertViewDelegate>{
+    
+    UIAlertController *_alert;
+    
+}
+
+@property(retain,nonatomic) UIAlertController *alert;
 
 @end
 
@@ -19,6 +25,14 @@
         self.tabBarItem.title = @"推荐";
         self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/like@2x.png"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/like_selected@2x.png"];
+//        填充dialog
+        self.alert = [UIAlertController alertControllerWithTitle:@"title" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        [self.alert addAction:[UIAlertAction actionWithTitle:@"cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"cancel click");
+        }]];
+        [self.alert addAction:[UIAlertAction actionWithTitle:@"sure" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            NSLog(@"sure click");
+        }]];
     }
     return self;
 }
@@ -38,6 +52,16 @@
         [scrollView addSubview:({
             UIView *view = [[UIView alloc]initWithFrame:CGRectMake(self.view.bounds.size.width*x,0, self.view.bounds.size.width, self.view.bounds.size.height)];
             view.backgroundColor = [arrayColor objectAtIndex:x];
+            
+            [view addSubview:({
+                UIView *view = [[UIView alloc]initWithFrame:CGRectMake(100, 0, 100, 100)];
+                view.backgroundColor=[UIColor grayColor];
+                UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapClickListener)];
+                
+                tapGesture.delegate =self;
+                [view addGestureRecognizer:tapGesture];
+                view;
+            })];
             view;
         })];
     }
@@ -47,8 +71,12 @@
     // Do any additional setup after loading the view.
 }
 
+#pragma mark - UIGestureRecognizerDelegate
 
-
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    NSLog(@"gestureRecognizerShouldBegin");
+    return YES;
+}
 
 
 #pragma mark - UIScrollViewDelegate
@@ -57,5 +85,11 @@
     NSLog(@"scrollViewDidScroll");
 }
 
+#pragma mark - click
+
+- (void) tapClickListener{
+    NSLog(@"tapClickListener");
+    [self presentViewController:self.alert animated:YES completion:nil ];
+}
 
 @end
