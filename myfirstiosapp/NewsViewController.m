@@ -8,8 +8,12 @@
 #import "NewsViewController.h"
 #import "NormalTableViewCell.h"
 #import "NewsDetailsViewController.h"
+#import "DFDeleteCellView.h"
 
 @interface NewsViewController ()<UITableViewDelegate,UITableViewDataSource,NormaleTableViewCellDelegate>
+@property (nonatomic, strong, readwrite) UITableView *uiTabView;
+@property (nonatomic, strong, readwrite) NSMutableArray *dataArray;
+
 
 @end
 
@@ -22,6 +26,11 @@
         self.tabBarItem.title = @"新闻";
         self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
+        _dataArray = @[].mutableCopy;
+        for (int i=0; i<20; i++) {
+            [_dataArray addObject:@(i)];
+        }
+        
     }
     return self;
 }
@@ -31,10 +40,14 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor=[UIColor whiteColor];
     
-    UITableView *uiTabView = [[UITableView alloc]initWithFrame:self.view.bounds];
-    uiTabView.dataSource = self;
-    uiTabView.delegate = self;
-    [self.view addSubview:uiTabView];
+    _uiTabView = [[UITableView alloc]initWithFrame:self.view.bounds];
+    _uiTabView.dataSource = self;
+    _uiTabView.delegate = self;
+    [self.view addSubview:_uiTabView];
+
+    
+    __weak typeof(self)wself = self;
+   
 
 //    UIView *view1 = [[UIView alloc]init];
 //    view1.frame = CGRectMake(100, 100, 100, 100);
@@ -60,7 +73,7 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return _dataArray.count;
 }
 
 
@@ -86,6 +99,17 @@
 -(void)tabViewCell:(UITableViewCell *) tabViewCell clickDeleteButton:(UIButton *) deleteButton{
     NSLog(@"click deletebutton");
     //打开全局浮窗
+    DFDeleteCellView *deleteView = [[DFDeleteCellView alloc]initWithFrame:self.view.bounds];
+    CGRect rect= [tabViewCell convertRect:deleteButton.frame toView:nil];
+    
+    __weak typeof(self)wself = self;
+
+    [deleteView showDeleteViewFromPoint:rect.origin clickBlock:^{
+        NSLog(@" delete  item click");
+        __strong typeof(wself) strongSelf = wself;
+        [strongSelf.dataArray removeLastObject];
+        [strongSelf.uiTabView deleteRowsAtIndexPaths:@[[strongSelf.uiTabView indexPathForCell:tabViewCell]] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }];
 }
 
 

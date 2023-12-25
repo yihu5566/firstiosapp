@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DFDeleteCellView : UIView
 
-
+- (void)showDeleteViewFromPoint:(CGPoint)point clickBlock:(dispatch_block_t)clickBlock;
 
 @end
 

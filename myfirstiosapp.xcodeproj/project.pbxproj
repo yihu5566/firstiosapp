@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D68847672B39657B0029D0C0 /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D68847662B39657B0029D0C0 /* GTScreen.m */; };
 		D6EBC7A42B2FF53D00A71CCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7A32B2FF53D00A71CCF /* AppDelegate.m */; };
 		D6EBC7A72B2FF53D00A71CCF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7A62B2FF53D00A71CCF /* SceneDelegate.m */; };
 		D6EBC7AA2B2FF53D00A71CCF /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7A92B2FF53D00A71CCF /* NewsViewController.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D68847652B39657B0029D0C0 /* GTScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTScreen.h; sourceTree = "<group>"; };
+		D68847662B39657B0029D0C0 /* GTScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTScreen.m; sourceTree = "<group>"; };
 		D6EBC79F2B2FF53D00A71CCF /* myfirstiosapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myfirstiosapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EBC7A22B2FF53D00A71CCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6EBC7A32B2FF53D00A71CCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -59,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D68847642B39653F0029D0C0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D68847652B39657B0029D0C0 /* GTScreen.h */,
+				D68847662B39657B0029D0C0 /* GTScreen.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		D6EBC7962B2FF53D00A71CCF = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +90,7 @@
 		D6EBC7A12B2FF53D00A71CCF /* myfirstiosapp */ = {
 			isa = PBXGroup;
 			children = (
+				D68847642B39653F0029D0C0 /* Utils */,
 				D6EBC7CA2B30456900A71CCF /* RecommendController */,
 				D6EBC7C32B3023EE00A71CCF /* VideoController */,
 				D6EBC7BE2B300F1B00A71CCF /* NewsController */,
@@ -207,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68847672B39657B0029D0C0 /* GTScreen.m in Sources */,
 				D6EBC7E62B328B4600A71CCF /* NewsDetailsViewController.m in Sources */,
 				D6EBC7E92B32C4BE00A71CCF /* DFDeleteCellView.m in Sources */,
 				D6EBC7C52B30250400A71CCF /* VideoViewController.m in Sources */,
