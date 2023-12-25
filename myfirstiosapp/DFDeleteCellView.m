@@ -37,8 +37,8 @@
             _deleteButton = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 0, 0)];
             _deleteButton.backgroundColor = [UIColor blueColor];
             [_deleteButton addTarget:self action:@selector(_clickButton) forControlEvents:UIControlEventTouchUpInside];
-//            [_deleteButton setTitle:@"confim delete" forState:UIControlStateNormal];
-//            _deleteButton.layer.cornerRadius = UI(25);
+            [_deleteButton setTitle:@"confim delete" forState:UIControlStateNormal];
+            _deleteButton.layer.cornerRadius = UI(25);
             _deleteButton;
         })];
 //        self.clipsToBounds=YES;
