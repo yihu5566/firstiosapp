@@ -10,6 +10,7 @@
 		90444C3C405D58B90AAC3978 /* libPods-myfirstiosapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAE72776744773991CA576C /* libPods-myfirstiosapp.a */; };
 		D68847672B39657B0029D0C0 /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D68847662B39657B0029D0C0 /* GTScreen.m */; };
 		D688476A2B3A6CA40029D0C0 /* DFListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D68847692B3A6CA40029D0C0 /* DFListLoader.m */; };
+		D688476E2B3ACC6C0029D0C0 /* DFListItemBean.m in Sources */ = {isa = PBXBuildFile; fileRef = D688476D2B3ACC6C0029D0C0 /* DFListItemBean.m */; };
 		D6EBC7A42B2FF53D00A71CCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7A32B2FF53D00A71CCF /* AppDelegate.m */; };
 		D6EBC7A72B2FF53D00A71CCF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7A62B2FF53D00A71CCF /* SceneDelegate.m */; };
 		D6EBC7AA2B2FF53D00A71CCF /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7A92B2FF53D00A71CCF /* NewsViewController.m */; };
@@ -33,6 +34,8 @@
 		D68847662B39657B0029D0C0 /* GTScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTScreen.m; sourceTree = "<group>"; };
 		D68847682B3A6CA40029D0C0 /* DFListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFListLoader.h; sourceTree = "<group>"; };
 		D68847692B3A6CA40029D0C0 /* DFListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFListLoader.m; sourceTree = "<group>"; };
+		D688476C2B3ACC6C0029D0C0 /* DFListItemBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFListItemBean.h; sourceTree = "<group>"; };
+		D688476D2B3ACC6C0029D0C0 /* DFListItemBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFListItemBean.m; sourceTree = "<group>"; };
 		D6EBC79F2B2FF53D00A71CCF /* myfirstiosapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myfirstiosapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EBC7A22B2FF53D00A71CCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6EBC7A32B2FF53D00A71CCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -76,7 +79,6 @@
 				358B8B8196D039E50B15F874 /* Pods-myfirstiosapp.debug.xcconfig */,
 				A81181F5387893695DC24316 /* Pods-myfirstiosapp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,6 +89,17 @@
 				D68847662B39657B0029D0C0 /* GTScreen.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D688476B2B3ACC160029D0C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D68847682B3A6CA40029D0C0 /* DFListLoader.h */,
+				D68847692B3A6CA40029D0C0 /* DFListLoader.m */,
+				D688476C2B3ACC6C0029D0C0 /* DFListItemBean.h */,
+				D688476D2B3ACC6C0029D0C0 /* DFListItemBean.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D6EBC7962B2FF53D00A71CCF = {
@@ -131,6 +144,7 @@
 		D6EBC7BE2B300F1B00A71CCF /* NewsController */ = {
 			isa = PBXGroup;
 			children = (
+				D688476B2B3ACC160029D0C0 /* Model */,
 				D6EBC7E22B328B0000A71CCF /* NewsDetails */,
 				D6EBC7A82B2FF53D00A71CCF /* NewsViewController.h */,
 				D6EBC7A92B2FF53D00A71CCF /* NewsViewController.m */,
@@ -138,8 +152,6 @@
 				D6EBC7CC2B31331800A71CCF /* NormalTableViewCell.m */,
 				D6EBC7E72B32C4BE00A71CCF /* DFDeleteCellView.h */,
 				D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */,
-				D68847682B3A6CA40029D0C0 /* DFListLoader.h */,
-				D68847692B3A6CA40029D0C0 /* DFListLoader.m */,
 			);
 			name = NewsController;
 			sourceTree = "<group>";
@@ -278,6 +290,7 @@
 			files = (
 				D68847672B39657B0029D0C0 /* GTScreen.m in Sources */,
 				D6EBC7E62B328B4600A71CCF /* NewsDetailsViewController.m in Sources */,
+				D688476E2B3ACC6C0029D0C0 /* DFListItemBean.m in Sources */,
 				D6EBC7E92B32C4BE00A71CCF /* DFDeleteCellView.m in Sources */,
 				D6EBC7C52B30250400A71CCF /* VideoViewController.m in Sources */,
 				D6EBC7AA2B2FF53D00A71CCF /* NewsViewController.m in Sources */,

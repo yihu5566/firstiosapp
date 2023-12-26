@@ -14,8 +14,8 @@
             filePath = "myfirstiosapp/DFListLoader.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "-loadListData"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "myfirstiosapp/DFListLoader.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "-loadListData"
             landmarkType = "7">
             <Locations>
@@ -66,6 +66,70 @@
                   offsetFromSymbolStart = "99">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9677CD5B-F055-4E14-BBA0-FAD099F13A85"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "myfirstiosapp/Model/DFListLoader.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-loadListData"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9677CD5B-F055-4E14-BBA0-FAD099F13A85 - fa2adcd2698f4d64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__28-[DFListLoader loadListData]_block_invoke"
+                  moduleName = "myfirstiosapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dongfang/Desktop/myfirstiosapp/myfirstiosapp/Model/DFListLoader.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "831">
+               </Location>
+               <Location
+                  uuid = "9677CD5B-F055-4E14-BBA0-FAD099F13A85 - fa2adcd2698f4d45"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__28-[DFListLoader loadListData]_block_invoke"
+                  moduleName = "myfirstiosapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dongfang/Desktop/myfirstiosapp/myfirstiosapp/Model/DFListLoader.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "831">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93828C22-9A16-47C1-82D7-FE3B522F85BC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "myfirstiosapp/Model/DFListLoader.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "-loadListData"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
