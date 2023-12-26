@@ -46,6 +46,7 @@
     return self;
 }
 
+/// 删除view方法
 -(void) dismissDeleteView{
     [self removeFromSuperview];
 }

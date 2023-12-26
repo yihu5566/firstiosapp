@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 
+
+/// 新闻控制器
 @interface NewsViewController : UIViewController
 
 
