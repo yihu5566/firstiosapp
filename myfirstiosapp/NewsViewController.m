@@ -10,6 +10,7 @@
 #import "NewsDetailsViewController.h"
 #import "NewsViewController.h"
 #import "NormalTableViewCell.h"
+#import "DFListItemBean.h"
 
 @interface NewsViewController ()<UITableViewDelegate, UITableViewDataSource, NormaleTableViewCellDelegate>
 @property (nonatomic, strong, readwrite) UITableView *uiTabView;
@@ -72,7 +73,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NewsDetailsViewController *viewCon = [[NewsDetailsViewController alloc]init];
+    DFListItemBean *item=[self.dataArray objectAtIndex:indexPath.row];
+    NewsDetailsViewController *viewCon = [[NewsDetailsViewController alloc]initWithUrlString:item.link];
 
     viewCon.view.backgroundColor = [UIColor whiteColor];
     viewCon.navigationItem.title = [NSString stringWithFormat:@"我是标题-%@", @(indexPath.row)];
