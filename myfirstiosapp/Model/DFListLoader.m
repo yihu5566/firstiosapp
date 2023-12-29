@@ -11,10 +11,10 @@
 
 @implementation DFListLoader
 
-- (void)loadListData {
+-(void) loadListDataWithFinishBlock:(GTListLoaderFinishBlock)finishBlock{
     NSString *urlString = @"https://www.wanandroid.com/project/list/1/json?cid=294";
     NSURL *listURL = [[NSURL alloc]initWithString:urlString];
-    NSURLRequest *listRequest = [[NSURLRequest alloc]initWithURL:listURL];
+//    NSURLRequest *listRequest = [[NSURLRequest alloc]initWithURL:listURL];
     NSURLSession *session = [NSURLSession sharedSession];
     NSURLSessionTask *task =  [session dataTaskWithURL:listURL
                                      completionHandler:^(NSData *_Nullable data, NSURLResponse *_Nullable response, NSError *_Nullable error) {
@@ -31,6 +31,12 @@
             [item configWithDictionary:info];
             [listItemArray addObject:item];
         }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (finishBlock) {
+                finishBlock(error==nil,listItemArray.copy);
+            }
+        });
 
         NSLog(@"");
     }];

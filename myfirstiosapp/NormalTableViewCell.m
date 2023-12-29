@@ -6,6 +6,7 @@
 //
 
 #import "NormalTableViewCell.h"
+#import "DFListItemBean.h"
 
 
 @interface NormalTableViewCell()
@@ -83,13 +84,15 @@
     }
 }
 
--(void) layoutTableViewCell{
-    self.titleLable.text = @"我是大雨ing";
+-(void) layoutTableViewCellWithItem:(DFListItemBean *)item{
     
-    self.sourceLable.text = @"中国食品报";
+
+    self.titleLable.text = item.title;
+    
+    self.sourceLable.text = item.author;
     [self.sourceLable sizeToFit];
     
-    self.commentLable.text = @"1111评论";
+    self.commentLable.text = item.chapterName;
     [self.commentLable sizeToFit];
     
     self.commentLable.frame = CGRectMake(
@@ -97,15 +100,19 @@
                                        self.commentLable.frame.origin.y,
                                        self.commentLable.frame.size.width,
                                        self.commentLable.frame.size.height);
-    self.timeLable.text = @"三分钟前";
-    [self.timeLable sizeToFit];
+    self.timeLable.text = item.niceDate;
     
+    [self.timeLable sizeToFit];
+
     self.timeLable.frame=CGRectMake(
                     self.commentLable.frame.origin.x+self.commentLable.frame.size.width+15,
                                     self.timeLable.frame.origin.y,
                                     self.timeLable.frame.size.width,
                                     self.timeLable.frame.size.height);
-    self.newsImageView.image = [UIImage imageNamed:@"icon.bundle/video@2x.png"];
+    
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:item.envelopePic]];
+
+    self.newsImageView.image = [UIImage imageWithData:data];
 
 }
 

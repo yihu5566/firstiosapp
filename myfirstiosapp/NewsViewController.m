@@ -6,14 +6,14 @@
 //
 
 #import "DFDeleteCellView.h"
+#import "DFListLoader.h"
 #import "NewsDetailsViewController.h"
 #import "NewsViewController.h"
 #import "NormalTableViewCell.h"
-#import "DFListLoader.h"
 
 @interface NewsViewController ()<UITableViewDelegate, UITableViewDataSource, NormaleTableViewCellDelegate>
 @property (nonatomic, strong, readwrite) UITableView *uiTabView;
-@property (nonatomic, strong, readwrite) NSMutableArray *dataArray;
+@property (nonatomic, strong, readwrite) NSArray *dataArray;
 @property (nonatomic, strong, readwrite) DFListLoader *listLoader;
 
 
@@ -30,10 +30,7 @@
         self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
         _dataArray = @[].mutableCopy;
-        
-        for (int i = 0; i < 20; i++) {
-            [_dataArray addObject:@(i)];
-        }
+
     }
 
     return self;
@@ -48,12 +45,16 @@
     _uiTabView.dataSource = self;
     _uiTabView.delegate = self;
     [self.view addSubview:_uiTabView];
-    
+
     self.listLoader = [[DFListLoader alloc]init];
-    [self.listLoader loadListData];
 
     __weak typeof(self) wself = self;
-
+    [self.listLoader loadListDataWithFinishBlock:^(BOOL success, NSArray<DFListItemBean *> *_Nonnull dataArray) {
+        __strong typeof(wself) strongSelf = wself;
+        strongSelf.dataArray = dataArray;
+        [strongSelf.uiTabView reloadData];
+        NSLog(@"");
+    }];
 
 //    UIView *view1 = [[UIView alloc]init];
 //    view1.frame = CGRectMake(100, 100, 100, 100);
@@ -91,7 +92,7 @@
 
     tabViewCell.delegate = self;
 
-    [tabViewCell layoutTableViewCell];
+    [tabViewCell layoutTableViewCellWithItem:[self.dataArray objectAtIndex:indexPath.row]];
 
 //    NSString *title= [NSString stringWithFormat:@"主题-%@", @(indexPath.row)];
 //    tabViewCell.textLabel.text=title;
@@ -108,14 +109,14 @@
 
     __weak typeof(self) wself = self;
 
-    [deleteView showDeleteViewFromPoint:rect.origin
-                             clickBlock:^{
-        NSLog(@" delete  item click");
-        __strong typeof(wself) strongSelf = wself;
-        [strongSelf.dataArray removeLastObject];
-        [strongSelf.uiTabView deleteRowsAtIndexPaths:@[[strongSelf.uiTabView indexPathForCell:tabViewCell]]
-                                    withRowAnimation:UITableViewRowAnimationAutomatic];
-    }];
+//    [deleteView showDeleteViewFromPoint:rect.origin
+//                             clickBlock:^{
+//        NSLog(@" delete  item click");
+//        __strong typeof(wself) strongSelf = wself;
+//        [strongSelf.dataArray removeLastObject];
+//        [strongSelf.uiTabView deleteRowsAtIndexPaths:@[[strongSelf.uiTabView indexPathForCell:tabViewCell]]
+//                                    withRowAnimation:UITableViewRowAnimationAutomatic];
+//    }];
 }
 
 //-(void)pushController{
