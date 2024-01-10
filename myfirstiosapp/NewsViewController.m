@@ -79,6 +79,10 @@
     viewCon.view.backgroundColor = [UIColor whiteColor];
     viewCon.navigationItem.title = [NSString stringWithFormat:@"我是标题-%@", @(indexPath.row)];
     [self.navigationController pushViewController:viewCon animated:YES];
+    
+    NSString *stringKey = [item.id stringValue];
+
+   [[NSUserDefaults standardUserDefaults]setBool:YES forKey:stringKey];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

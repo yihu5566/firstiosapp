@@ -12,6 +12,13 @@
 @implementation DFListLoader
 
 - (void)loadListDataWithFinishBlock:(GTListLoaderFinishBlock)finishBlock {
+    NSArray<DFListItemBean *> *listItemArray =  [self _readDataFromLocal];
+
+    if (listItemArray) {
+        finishBlock(YES, listItemArray.copy);
+        return;
+    }
+
     NSString *urlString = @"https://www.wanandroid.com/project/list/1/json?cid=294";
     NSURL *listURL = [[NSURL alloc]initWithString:urlString];
 //    NSURLRequest *listRequest = [[NSURLRequest alloc]initWithURL:listURL];
@@ -73,6 +80,23 @@
     NSLog(@"");
 }
 
+- (NSArray<DFListItemBean *> *)_readDataFromLocal {
+    NSArray *pathArray =  NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *cachePath = [pathArray firstObject];
+    NSString *listDataPath = [cachePath stringByAppendingPathComponent:@"DFData/list"];
+
+    NSFileManager *fileManager =   [NSFileManager defaultManager];
+    NSDate *readListData = [fileManager contentsAtPath:listDataPath];
+
+    id unarchive =  [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [DFListItemBean class], nil] fromData:readListData error:nil];
+
+    if ([unarchive isKindOfClass:[NSArray class]] && [unarchive count] > 0) {
+        return (NSArray<DFListItemBean *> *)unarchive;
+    }
+
+    return nil;
+}
+
 - (void)_archiveListDataWithArray:(NSArray<DFListItemBean *> *)array {
     NSArray *pathArray =  NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
     NSString *cachePath = [pathArray firstObject];
@@ -91,9 +115,9 @@
     [fileManager createFileAtPath:listDataPath contents:nsData attributes:nil];
 
     NSDate *readListData = [fileManager contentsAtPath:listDataPath];
-    
+
     id unarchive =  [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [DFListItemBean class], nil] fromData:readListData error:nil];
-    
+
     NSLog(@"打印字符串：%@", listDataPath);
 }
 

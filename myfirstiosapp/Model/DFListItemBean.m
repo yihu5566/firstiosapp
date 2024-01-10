@@ -23,6 +23,7 @@
         self.niceDate = [coder decodeObjectForKey:@"niceDate"];
         self.author = [coder decodeObjectForKey:@"author"];
         self.link = [coder decodeObjectForKey:@"link"];
+        self.id = [coder decodeObjectForKey:@"id"];
     }
 
     return self;
@@ -36,6 +37,7 @@
     [coder encodeObject:self.niceDate forKey:@"niceDate"];
     [coder encodeObject:self.author forKey:@"author"];
     [coder encodeObject:self.link forKey:@"link"];
+    [coder encodeObject:self.id forKey:@"id"];
 }
 
 + (BOOL)supportsSecureCoding {
@@ -51,6 +53,7 @@
     self.niceDate = [dictionary objectForKey:@"niceDate"];
     self.author = [dictionary objectForKey:@"author"];
     self.link = [dictionary objectForKey:@"link"];
+    self.id = [dictionary objectForKey:@"id"];
 }
 
 @end

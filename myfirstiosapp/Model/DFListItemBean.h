@@ -12,13 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 //结构数据
 @interface DFListItemBean : NSObject<NSSecureCoding>
 
-@property(nonatomic, copy, readwrite) NSString *title;
-@property(nonatomic, copy, readwrite) NSString *envelopePic;
-@property(nonatomic, copy, readwrite) NSString *uniqueKey;
-@property(nonatomic, copy, readwrite) NSString *chapterName;
-@property(nonatomic, copy, readwrite) NSString *niceDate;
-@property(nonatomic, copy, readwrite) NSString *author;
-@property(nonatomic, copy, readwrite) NSString *link;
+@property (nonatomic, copy, readwrite) NSString *title;
+@property (nonatomic, copy, readwrite) NSString *envelopePic;
+@property (nonatomic, copy, readwrite) NSString *chapterName;
+@property (nonatomic, copy, readwrite) NSString *niceDate;
+@property (nonatomic, copy, readwrite) NSString *author;
+@property (nonatomic, copy, readwrite) NSString *link;
+@property (nonatomic, strong) NSNumber *id;
+
+
 
 - (void)configWithDictionary:(NSDictionary *)dictionary;
 
