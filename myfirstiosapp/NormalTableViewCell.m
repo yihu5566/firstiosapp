@@ -56,7 +56,7 @@
             self.timeLable;
         })];
         [self.contentView addSubview:({
-            self.newsImageView = [[UIImageView alloc]initWithFrame:CGRectMake(320, 15, 70, 70)];
+            self.newsImageView = [[UIImageView alloc]initWithFrame:CGRectMake(320, 20, 50, 50)];
             self.newsImageView.backgroundColor = [UIColor grayColor];
             self.newsImageView.contentMode = UIViewContentModeScaleAspectFill;
             self.newsImageView;
@@ -123,9 +123,39 @@
         self.timeLable.frame.size.width,
         self.timeLable.frame.size.height);
 
-    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:item.envelopePic]];
 
-    self.newsImageView.image = [UIImage imageWithData:data];
+    // 在非主线程下载图片
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // 下载图片的逻辑
+        NSURL *imageURL = [NSURL URLWithString:item.envelopePic];
+        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+        UIImage *image = [UIImage imageWithData:imageData];
+        
+        // 将下载的图片传递给主线程
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // 在主线程中显示图片
+            if (image) {
+                self.newsImageView.image = image;
+            } else {
+                NSLog(@"Failed to download image");
+            }
+        });
+    });
+    
+    
+    
+    
+//    NSThread *nsThread = [[NSThread alloc] initWithBlock:^{
+//        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:item.envelopePic]];
+//
+//        self.newsImageView.image = [UIImage imageWithData:data];
+//    }];
+//    nsThread.name = @"downloadThread";
+//    [nsThread start];
+
+//    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:item.envelopePic]];
+//
+//    self.newsImageView.image = [UIImage imageWithData:data];
 }
 
 @end
