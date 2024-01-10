@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 //结构数据
-@interface DFListItemBean : NSObject
+@interface DFListItemBean : NSObject<NSSecureCoding>
 
 @property(nonatomic, copy, readwrite) NSString *title;
 @property(nonatomic, copy, readwrite) NSString *envelopePic;
