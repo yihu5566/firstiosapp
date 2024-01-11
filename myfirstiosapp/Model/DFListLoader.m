@@ -12,8 +12,8 @@
 @implementation DFListLoader
 
 - (void)loadListDataWithFinishBlock:(GTListLoaderFinishBlock)finishBlock {
+    
     NSArray<DFListItemBean *> *listItemArray =  [self _readDataFromLocal];
-
     if (listItemArray) {
         finishBlock(YES, listItemArray.copy);
         return;

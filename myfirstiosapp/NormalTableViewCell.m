@@ -7,6 +7,7 @@
 
 #import "DFListItemBean.h"
 #import "NormalTableViewCell.h"
+#import "SDWebImage.h"
 
 
 @interface NormalTableViewCell ()
@@ -122,26 +123,30 @@
         self.timeLable.frame.origin.y,
         self.timeLable.frame.size.width,
         self.timeLable.frame.size.height);
-
+    
+   
+    [self.newsImageView sd_setImageWithURL:[NSURL URLWithString:item.envelopePic]
+                                      completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
+                                            //处理业务逻辑，通过cacheType判断图片是否命中缓存
+                                      }];
 
     // 在非主线程下载图片
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // 下载图片的逻辑
-        NSURL *imageURL = [NSURL URLWithString:item.envelopePic];
-        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-        UIImage *image = [UIImage imageWithData:imageData];
-        
-        // 将下载的图片传递给主线程
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // 在主线程中显示图片
-            if (image) {
-                self.newsImageView.image = image;
-            } else {
-                NSLog(@"Failed to download image");
-            }
-        });
-    });
-    
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        // 下载图片的逻辑
+//        NSURL *imageURL = [NSURL URLWithString:item.envelopePic];
+//        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+//        UIImage *image = [UIImage imageWithData:imageData];
+//        
+//        // 将下载的图片传递给主线程
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            // 在主线程中显示图片
+//            if (image) {
+//                self.newsImageView.image = image;
+//            } else {
+//                NSLog(@"Failed to download image");
+//            }
+//        });
+//    });
     
     
     
