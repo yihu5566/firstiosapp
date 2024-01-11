@@ -24,6 +24,7 @@
 		D6EBC7CD2B31331800A71CCF /* NormalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7CC2B31331800A71CCF /* NormalTableViewCell.m */; };
 		D6EBC7E62B328B4600A71CCF /* NewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7E52B328B4600A71CCF /* NewsDetailsViewController.m */; };
 		D6EBC7E92B32C4BE00A71CCF /* DFDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */; };
+		D6F0C5C52B4FE4BA00D3360D /* DFVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F0C5C42B4FE4BA00D3360D /* DFVideoCoverView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		D6EBC7E52B328B4600A71CCF /* NewsDetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDetailsViewController.m; sourceTree = "<group>"; };
 		D6EBC7E72B32C4BE00A71CCF /* DFDeleteCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFDeleteCellView.h; sourceTree = "<group>"; };
 		D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFDeleteCellView.m; sourceTree = "<group>"; };
+		D6F0C5C32B4FE4BA00D3360D /* DFVideoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFVideoCoverView.h; sourceTree = "<group>"; };
+		D6F0C5C42B4FE4BA00D3360D /* DFVideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFVideoCoverView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +162,10 @@
 		D6EBC7C32B3023EE00A71CCF /* VideoController */ = {
 			isa = PBXGroup;
 			children = (
-				D6EBC7C42B30250400A71CCF /* VideoViewController.m */,
 				D6EBC7C62B30251A00A71CCF /* VideoViewController.h */,
+				D6EBC7C42B30250400A71CCF /* VideoViewController.m */,
+				D6F0C5C32B4FE4BA00D3360D /* DFVideoCoverView.h */,
+				D6F0C5C42B4FE4BA00D3360D /* DFVideoCoverView.m */,
 			);
 			path = VideoController;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 				D68847672B39657B0029D0C0 /* GTScreen.m in Sources */,
 				D6EBC7E62B328B4600A71CCF /* NewsDetailsViewController.m in Sources */,
 				D688476E2B3ACC6C0029D0C0 /* DFListItemBean.m in Sources */,
+				D6F0C5C52B4FE4BA00D3360D /* DFVideoCoverView.m in Sources */,
 				D6EBC7E92B32C4BE00A71CCF /* DFDeleteCellView.m in Sources */,
 				D6EBC7C52B30250400A71CCF /* VideoViewController.m in Sources */,
 				D6EBC7AA2B2FF53D00A71CCF /* NewsViewController.m in Sources */,
