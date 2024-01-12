@@ -34,7 +34,7 @@
     UICollectionViewFlowLayout *flowLayout =  [[UICollectionViewFlowLayout alloc]init];
     flowLayout.minimumLineSpacing = 10;
     flowLayout.minimumInteritemSpacing = 10;
-    flowLayout.itemSize = CGSizeMake((self.view.frame.size.width - 50), 300);
+    flowLayout.itemSize = CGSizeMake((self.view.frame.size.width - 50), (self.view.frame.size.width - 50)/16*9);
 
 
     UICollectionView *uicollection =  [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
@@ -61,8 +61,7 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DFVideoCoverView" forIndexPath:indexPath];
 
     if ([cell isKindOfClass:[DFVideoCoverView class]]) {
-        NSLog(@"我是新的。。。");
-        [((DFVideoCoverView *)cell) layoutWithVideoCoverUrl:@"icon.bundle/videoCover@3x.png" videoUrl:@"https://www.youtube.com/watch?v=euoEIPD1DrU&ab_channel=%E7%A7%91%E6%8A%80%E4%B8%8E%E5%88%86%E4%BA%AB"];
+        [((DFVideoCoverView *)cell) layoutWithVideoCoverUrl:@"icon.bundle/videoCover@3x.png" videoUrl:@"http://vjs.zencdn.net/v/oceans.mp4"];
     }
 
     return cell;
