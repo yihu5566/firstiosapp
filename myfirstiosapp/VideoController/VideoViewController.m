@@ -40,6 +40,7 @@
     UICollectionView *uicollection =  [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     uicollection.delegate = self;
     uicollection.dataSource = self;
+    
     [uicollection registerClass:[DFVideoCoverView class] forCellWithReuseIdentifier:@"DFVideoCoverView"];
 
     [self.view addSubview:uicollection];
@@ -54,7 +55,7 @@
 //}
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 200;
+    return 20;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
