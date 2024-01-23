@@ -7,17 +7,13 @@
 
 #import <AVFoundation/AVFoundation.h>
 #import "DFVideoCoverView.h"
+#import "DFVideoPlayer.h"
 
 @interface DFVideoCoverView ()
-
-@property (nonatomic, strong, readwrite) AVPlayerItem *avPlayItem;
-@property (nonatomic, strong, readwrite) AVPlayer *avPlayerDF;
-@property (nonatomic, strong, readwrite) AVPlayerLayer *avPlayerLayer;
 
 @property (nonatomic, strong, readwrite) UIImageView *coverView;
 @property (nonatomic, strong, readwrite) UIImageView *playButton;
 @property (nonatomic, copy, readwrite) NSString *videoUrl;
-
 
 @end
 
@@ -43,18 +39,12 @@
         UITapGestureRecognizer *topGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(_tapTopPlay)];
         [self addGestureRecognizer:topGesture];
 
-        [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(_handlePlayEnd) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
+    
     }
 
     return self;
 }
 
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter]removeObserver:self];
-    [_avPlayItem removeObserver:self forKeyPath:@"status"];
-    [_avPlayItem removeObserver:self forKeyPath:@"LoadedTimeRanges"];
-}
 
 #pragma public method
 - (void)layoutWithVideoCoverUrl:(NSString *)videoCoverUrl videoUrl:(NSString *)videoUrl {
@@ -63,53 +53,9 @@
     _videoUrl = videoUrl;
 }
 
-#pragma prive method
-- (void)_handlePlayEnd {
-    NSLog(@"");
-//    [_avPlayerLayer removeFromSuperlayer];
-//    _avPlayItem = nil;
-//    _avPlayerDF = nil;
-    [_avPlayerDF seekToTime:CMTimeMake(0, 1)];
-    [_avPlayerDF play];
-}
-
 - (void)_tapTopPlay {
     NSLog(@"top");
-
-    NSURL *urlVideo =   [NSURL URLWithString:_videoUrl];
-    AVAsset *videoAsset =  [AVAsset assetWithURL:urlVideo];
-
-    _avPlayItem = [AVPlayerItem playerItemWithAsset:videoAsset];
-    [_avPlayItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
-    [_avPlayItem addObserver:self forKeyPath:@"LoadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];
-   
-//    CMTime duration=_avPlayItem.duration;
-//    CGFloat videoDuration = CMTimeGetSeconds(duration);
-    
-    _avPlayerDF = [AVPlayer playerWithPlayerItem:_avPlayItem];
-    
-    [_avPlayerDF addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
-        NSLog(@"播放进度：%@",@(CMTimeGetSeconds(time)));
-    }];
-    
-    _avPlayerLayer = [AVPlayerLayer playerLayerWithPlayer:_avPlayerDF];
-
-    _avPlayerLayer.frame = _coverView.bounds;
-    [_coverView.layer addSublayer:_avPlayerLayer];
-
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if ([keyPath isEqualToString:@"status"]) {
-        if ((((NSNumber *)[change objectForKey:NSKeyValueChangeNewKey]).integerValue==AVPlayerItemStatusReadyToPlay)) {
-            [_avPlayerDF play];
-        }else{
-            NSLog(@"");
-        }
-    }else if ([keyPath isEqualToString:@"LoadedTimeRanges"]){
-        NSLog(@"缓冲：%@",[change objectForKey:NSKeyValueChangeNewKey] );
-    }
+    [[DFVideoPlayer player]playVideoWithUrl:_videoUrl attachView:_coverView];
 }
 
 @end
