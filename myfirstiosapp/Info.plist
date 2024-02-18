@@ -26,5 +26,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UILaunchImageFile</key>
+	<string>LaunchImage</string>
 </dict>
 </plist>

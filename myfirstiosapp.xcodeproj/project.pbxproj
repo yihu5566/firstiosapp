@@ -10,6 +10,7 @@
 		90444C3C405D58B90AAC3978 /* libPods-myfirstiosapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAE72776744773991CA576C /* libPods-myfirstiosapp.a */; };
 		D642D00C2B5FA38500E5DA6E /* DFVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D642D00B2B5FA38500E5DA6E /* DFVideoPlayer.m */; };
 		D642D00F2B5FBD7600E5DA6E /* DFVideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D642D00E2B5FBD7600E5DA6E /* DFVideoToolBar.m */; };
+		D6700CDD2B81E18A0060ABD0 /* DFSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = D6700CDC2B81E18A0060ABD0 /* DFSplash.m */; };
 		D68847672B39657B0029D0C0 /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D68847662B39657B0029D0C0 /* GTScreen.m */; };
 		D688476A2B3A6CA40029D0C0 /* DFListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D68847692B3A6CA40029D0C0 /* DFListLoader.m */; };
 		D688476E2B3ACC6C0029D0C0 /* DFListItemBean.m in Sources */ = {isa = PBXBuildFile; fileRef = D688476D2B3ACC6C0029D0C0 /* DFListItemBean.m */; };
@@ -18,7 +19,6 @@
 		D6EBC7AA2B2FF53D00A71CCF /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7A92B2FF53D00A71CCF /* NewsViewController.m */; };
 		D6EBC7AD2B2FF53D00A71CCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6EBC7AB2B2FF53D00A71CCF /* Main.storyboard */; };
 		D6EBC7AF2B2FF53F00A71CCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6EBC7AE2B2FF53F00A71CCF /* Assets.xcassets */; };
-		D6EBC7B22B2FF53F00A71CCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6EBC7B02B2FF53F00A71CCF /* LaunchScreen.storyboard */; };
 		D6EBC7B52B2FF53F00A71CCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7B42B2FF53F00A71CCF /* main.m */; };
 		D6EBC7BD2B2FF87600A71CCF /* icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D6EBC7BC2B2FF87600A71CCF /* icon.bundle */; };
 		D6EBC7C52B30250400A71CCF /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7C42B30250400A71CCF /* VideoViewController.m */; };
@@ -37,6 +37,8 @@
 		D642D00B2B5FA38500E5DA6E /* DFVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFVideoPlayer.m; sourceTree = "<group>"; };
 		D642D00D2B5FBD7600E5DA6E /* DFVideoToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFVideoToolBar.h; sourceTree = "<group>"; };
 		D642D00E2B5FBD7600E5DA6E /* DFVideoToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFVideoToolBar.m; sourceTree = "<group>"; };
+		D6700CDB2B81E18A0060ABD0 /* DFSplash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFSplash.h; sourceTree = "<group>"; };
+		D6700CDC2B81E18A0060ABD0 /* DFSplash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSplash.m; sourceTree = "<group>"; };
 		D68847652B39657B0029D0C0 /* GTScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTScreen.h; sourceTree = "<group>"; };
 		D68847662B39657B0029D0C0 /* GTScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTScreen.m; sourceTree = "<group>"; };
 		D68847682B3A6CA40029D0C0 /* DFListLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFListLoader.h; sourceTree = "<group>"; };
@@ -52,7 +54,6 @@
 		D6EBC7A92B2FF53D00A71CCF /* NewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		D6EBC7AC2B2FF53D00A71CCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6EBC7AE2B2FF53F00A71CCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D6EBC7B12B2FF53F00A71CCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6EBC7B32B2FF53F00A71CCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6EBC7B42B2FF53F00A71CCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6EBC7BC2B2FF87600A71CCF /* icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = icon.bundle; path = "../../../Downloads/geektime-ios-course-master/project/SampleApp/icon.bundle"; sourceTree = "<group>"; };
@@ -143,9 +144,10 @@
 				D6EBC7A62B2FF53D00A71CCF /* SceneDelegate.m */,
 				D6EBC7AB2B2FF53D00A71CCF /* Main.storyboard */,
 				D6EBC7AE2B2FF53F00A71CCF /* Assets.xcassets */,
-				D6EBC7B02B2FF53F00A71CCF /* LaunchScreen.storyboard */,
 				D6EBC7B32B2FF53F00A71CCF /* Info.plist */,
 				D6EBC7B42B2FF53F00A71CCF /* main.m */,
+				D6700CDB2B81E18A0060ABD0 /* DFSplash.h */,
+				D6700CDC2B81E18A0060ABD0 /* DFSplash.m */,
 			);
 			path = myfirstiosapp;
 			sourceTree = "<group>";
@@ -266,7 +268,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6EBC7BD2B2FF87600A71CCF /* icon.bundle in Resources */,
-				D6EBC7B22B2FF53F00A71CCF /* LaunchScreen.storyboard in Resources */,
 				D6EBC7AF2B2FF53F00A71CCF /* Assets.xcassets in Resources */,
 				D6EBC7AD2B2FF53D00A71CCF /* Main.storyboard in Resources */,
 			);
@@ -331,6 +332,7 @@
 				D6EBC7AA2B2FF53D00A71CCF /* NewsViewController.m in Sources */,
 				D6EBC7A42B2FF53D00A71CCF /* AppDelegate.m in Sources */,
 				D642D00F2B5FBD7600E5DA6E /* DFVideoToolBar.m in Sources */,
+				D6700CDD2B81E18A0060ABD0 /* DFSplash.m in Sources */,
 				D6EBC7B52B2FF53F00A71CCF /* main.m in Sources */,
 				D6EBC7A72B2FF53D00A71CCF /* SceneDelegate.m in Sources */,
 				D6EBC7C92B30455A00A71CCF /* RecommendViewController.m in Sources */,
@@ -348,14 +350,6 @@
 				D6EBC7AC2B2FF53D00A71CCF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D6EBC7B02B2FF53F00A71CCF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6EBC7B12B2FF53F00A71CCF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -483,7 +477,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H9BQ39Z453;
@@ -491,7 +486,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myfirstiosapp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -513,7 +508,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H9BQ39Z453;
@@ -521,7 +517,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myfirstiosapp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = Main.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
