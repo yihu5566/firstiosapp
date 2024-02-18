@@ -55,7 +55,7 @@
 #pragma public method
 - (void)layoutWithVideoCoverUrl:(NSString *)videoCoverUrl videoUrl:(NSString *)videoUrl {
     _coverView.image = [UIImage imageNamed:videoCoverUrl];
-    _playButton.image = [UIImage imageNamed:@"icon.bundle/videoPlay@3x.png"];
+    _playButton.image = [UIImage imageNamed:@"videoPlay"];
     _videoUrl = videoUrl;
     [_toolBar layoutWithModel:nil];
 }

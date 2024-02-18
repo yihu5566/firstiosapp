@@ -62,7 +62,7 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"DFVideoCoverView" forIndexPath:indexPath];
 
     if ([cell isKindOfClass:[DFVideoCoverView class]]) {
-        [((DFVideoCoverView *)cell) layoutWithVideoCoverUrl:@"icon.bundle/videoCover@3x.png" videoUrl:@"http://vjs.zencdn.net/v/oceans.mp4"];
+        [((DFVideoCoverView *)cell) layoutWithVideoCoverUrl:@"videoCover" videoUrl:@"http://vjs.zencdn.net/v/oceans.mp4"];
     }
 
     return cell;
