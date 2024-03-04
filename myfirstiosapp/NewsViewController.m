@@ -6,11 +6,11 @@
 //
 
 #import "DFDeleteCellView.h"
+#import "DFListItemBean.h"
 #import "DFListLoader.h"
-#import "NewsDetailsViewController.h"
+#import "DFMediator.h"
 #import "NewsViewController.h"
 #import "NormalTableViewCell.h"
-#import "DFListItemBean.h"
 
 @interface NewsViewController ()<UITableViewDelegate, UITableViewDataSource, NormaleTableViewCellDelegate>
 @property (nonatomic, strong, readwrite) UITableView *uiTabView;
@@ -31,7 +31,6 @@
         self.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/page@2x.png"];
         self.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/page_selected@2x.png"];
         _dataArray = @[].mutableCopy;
-
     }
 
     return self;
@@ -73,16 +72,17 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    DFListItemBean *item=[self.dataArray objectAtIndex:indexPath.row];
-    NewsDetailsViewController *viewCon = [[NewsDetailsViewController alloc]initWithUrlString:item.link];
+    DFListItemBean *item = [self.dataArray objectAtIndex:indexPath.row];
+    
+   __kindof UIViewController *viewCon =  [DFMediator detailViewControllerWithUrl:item.link];
 
     viewCon.view.backgroundColor = [UIColor whiteColor];
     viewCon.navigationItem.title = [NSString stringWithFormat:@"我是标题-%@", @(indexPath.row)];
     [self.navigationController pushViewController:viewCon animated:YES];
-    
+
     NSString *stringKey = [item.id stringValue];
 
-   [[NSUserDefaults standardUserDefaults]setBool:YES forKey:stringKey];
+    [[NSUserDefaults standardUserDefaults]setBool:YES forKey:stringKey];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

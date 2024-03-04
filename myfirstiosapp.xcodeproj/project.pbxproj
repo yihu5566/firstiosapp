@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90444C3C405D58B90AAC3978 /* libPods-myfirstiosapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAE72776744773991CA576C /* libPods-myfirstiosapp.a */; };
+		D60D7F072B959B8500C495C0 /* DFMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D7F062B959B8500C495C0 /* DFMediator.m */; };
 		D642D00C2B5FA38500E5DA6E /* DFVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D642D00B2B5FA38500E5DA6E /* DFVideoPlayer.m */; };
 		D642D00F2B5FBD7600E5DA6E /* DFVideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D642D00E2B5FBD7600E5DA6E /* DFVideoToolBar.m */; };
 		D6700CDD2B81E18A0060ABD0 /* DFSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = D6700CDC2B81E18A0060ABD0 /* DFSplash.m */; };
@@ -33,6 +34,8 @@
 		1FAE72776744773991CA576C /* libPods-myfirstiosapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myfirstiosapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		358B8B8196D039E50B15F874 /* Pods-myfirstiosapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myfirstiosapp.debug.xcconfig"; path = "Target Support Files/Pods-myfirstiosapp/Pods-myfirstiosapp.debug.xcconfig"; sourceTree = "<group>"; };
 		A81181F5387893695DC24316 /* Pods-myfirstiosapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myfirstiosapp.release.xcconfig"; path = "Target Support Files/Pods-myfirstiosapp/Pods-myfirstiosapp.release.xcconfig"; sourceTree = "<group>"; };
+		D60D7F052B959B8500C495C0 /* DFMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFMediator.h; sourceTree = "<group>"; };
+		D60D7F062B959B8500C495C0 /* DFMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFMediator.m; sourceTree = "<group>"; };
 		D642D00A2B5FA38500E5DA6E /* DFVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFVideoPlayer.h; sourceTree = "<group>"; };
 		D642D00B2B5FA38500E5DA6E /* DFVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFVideoPlayer.m; sourceTree = "<group>"; };
 		D642D00D2B5FBD7600E5DA6E /* DFVideoToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFVideoToolBar.h; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				D6EBC7B42B2FF53F00A71CCF /* main.m */,
 				D6700CDB2B81E18A0060ABD0 /* DFSplash.h */,
 				D6700CDC2B81E18A0060ABD0 /* DFSplash.m */,
+				D60D7F052B959B8500C495C0 /* DFMediator.h */,
+				D60D7F062B959B8500C495C0 /* DFMediator.m */,
 			);
 			path = myfirstiosapp;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D60D7F072B959B8500C495C0 /* DFMediator.m in Sources */,
 				D68847672B39657B0029D0C0 /* GTScreen.m in Sources */,
 				D6EBC7E62B328B4600A71CCF /* NewsDetailsViewController.m in Sources */,
 				D642D00C2B5FA38500E5DA6E /* DFVideoPlayer.m in Sources */,
@@ -479,9 +485,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H9BQ39Z453;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myfirstiosapp/Info.plist;
@@ -497,6 +503,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongfang.myfirstiosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -510,9 +517,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H9BQ39Z453;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myfirstiosapp/Info.plist;
@@ -528,6 +535,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongfang.myfirstiosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
