@@ -10,6 +10,7 @@
 #import "RecommendViewController.h"
 #import "SceneDelegate.h"
 #import "VideoViewController.h"
+#import "MineViewController.h"
 
 @interface SceneDelegate ()<UITabBarControllerDelegate>
 
@@ -30,19 +31,13 @@
 
     NewsViewController *viewController = [[NewsViewController alloc]init];
 
-
     VideoViewController *videoController = [[VideoViewController alloc]init];
 
     RecommendViewController *recommendController = [[RecommendViewController alloc]init];
 
-    UIViewController *uiViewController4 = [[UIViewController alloc]init];
-    uiViewController4.view.backgroundColor = [UIColor lightGrayColor];
-    uiViewController4.tabBarItem.title = @"我的";
-    uiViewController4.tabBarItem.image = [UIImage imageNamed:@"icon.bundle/home@2x.png"];
-    uiViewController4.tabBarItem.selectedImage = [UIImage imageNamed:@"icon.bundle/home_selected@2x.png"];
-
-
-    [tabBarController setViewControllers:@[viewController, videoController, recommendController, uiViewController4]];
+    MineViewController *mineViewController = [[MineViewController alloc]init];
+    
+    [tabBarController setViewControllers:@[viewController, videoController, recommendController, mineViewController]];
 
     UINavigationController *uiNavigationController1 =  [[UINavigationController alloc]initWithRootViewController:tabBarController];
 

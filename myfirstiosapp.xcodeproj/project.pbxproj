@@ -11,6 +11,9 @@
 		D60D7F072B959B8500C495C0 /* DFMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D7F062B959B8500C495C0 /* DFMediator.m */; };
 		D642D00C2B5FA38500E5DA6E /* DFVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D642D00B2B5FA38500E5DA6E /* DFVideoPlayer.m */; };
 		D642D00F2B5FBD7600E5DA6E /* DFVideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D642D00E2B5FBD7600E5DA6E /* DFVideoToolBar.m */; };
+		D64740502BA18256001900B2 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D647404F2BA18256001900B2 /* TencentOpenAPI.framework */; };
+		D64740542BA183CF001900B2 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64740532BA183CF001900B2 /* MineViewController.m */; };
+		D64740572BA1A6E0001900B2 /* GTLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = D64740562BA1A6E0001900B2 /* GTLogin.m */; };
 		D6700CDD2B81E18A0060ABD0 /* DFSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = D6700CDC2B81E18A0060ABD0 /* DFSplash.m */; };
 		D68847672B39657B0029D0C0 /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D68847662B39657B0029D0C0 /* GTScreen.m */; };
 		D688476A2B3A6CA40029D0C0 /* DFListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D68847692B3A6CA40029D0C0 /* DFListLoader.m */; };
@@ -40,6 +43,11 @@
 		D642D00B2B5FA38500E5DA6E /* DFVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFVideoPlayer.m; sourceTree = "<group>"; };
 		D642D00D2B5FBD7600E5DA6E /* DFVideoToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFVideoToolBar.h; sourceTree = "<group>"; };
 		D642D00E2B5FBD7600E5DA6E /* DFVideoToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFVideoToolBar.m; sourceTree = "<group>"; };
+		D647404F2BA18256001900B2 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		D64740522BA183CF001900B2 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		D64740532BA183CF001900B2 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		D64740552BA1A6E0001900B2 /* GTLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTLogin.h; sourceTree = "<group>"; };
+		D64740562BA1A6E0001900B2 /* GTLogin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTLogin.m; sourceTree = "<group>"; };
 		D6700CDB2B81E18A0060ABD0 /* DFSplash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFSplash.h; sourceTree = "<group>"; };
 		D6700CDC2B81E18A0060ABD0 /* DFSplash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFSplash.m; sourceTree = "<group>"; };
 		D68847652B39657B0029D0C0 /* GTScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTScreen.h; sourceTree = "<group>"; };
@@ -80,6 +88,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90444C3C405D58B90AAC3978 /* libPods-myfirstiosapp.a in Frameworks */,
+				D64740502BA18256001900B2 /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +102,25 @@
 				A81181F5387893695DC24316 /* Pods-myfirstiosapp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D647404E2BA181E1001900B2 /* GTFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D647404F2BA18256001900B2 /* TencentOpenAPI.framework */,
+			);
+			path = GTFrameworks;
+			sourceTree = "<group>";
+		};
+		D64740512BA18385001900B2 /* MineController */ = {
+			isa = PBXGroup;
+			children = (
+				D64740522BA183CF001900B2 /* MineViewController.h */,
+				D64740532BA183CF001900B2 /* MineViewController.m */,
+				D64740552BA1A6E0001900B2 /* GTLogin.h */,
+				D64740562BA1A6E0001900B2 /* GTLogin.m */,
+			);
+			path = MineController;
 			sourceTree = "<group>";
 		};
 		D68847642B39653F0029D0C0 /* Utils */ = {
@@ -136,6 +164,8 @@
 		D6EBC7A12B2FF53D00A71CCF /* myfirstiosapp */ = {
 			isa = PBXGroup;
 			children = (
+				D64740512BA18385001900B2 /* MineController */,
+				D647404E2BA181E1001900B2 /* GTFrameworks */,
 				D68847642B39653F0029D0C0 /* Utils */,
 				D6EBC7CA2B30456900A71CCF /* RecommendController */,
 				D6EBC7C32B3023EE00A71CCF /* VideoController */,
@@ -330,8 +360,10 @@
 				D60D7F072B959B8500C495C0 /* DFMediator.m in Sources */,
 				D68847672B39657B0029D0C0 /* GTScreen.m in Sources */,
 				D6EBC7E62B328B4600A71CCF /* NewsDetailsViewController.m in Sources */,
+				D64740542BA183CF001900B2 /* MineViewController.m in Sources */,
 				D642D00C2B5FA38500E5DA6E /* DFVideoPlayer.m in Sources */,
 				D688476E2B3ACC6C0029D0C0 /* DFListItemBean.m in Sources */,
+				D64740572BA1A6E0001900B2 /* GTLogin.m in Sources */,
 				D6F0C5C52B4FE4BA00D3360D /* DFVideoCoverView.m in Sources */,
 				D6EBC7E92B32C4BE00A71CCF /* DFDeleteCellView.m in Sources */,
 				D6EBC7C52B30250400A71CCF /* VideoViewController.m in Sources */,
@@ -489,6 +521,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/myfirstiosapp/GTFrameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myfirstiosapp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -521,6 +557,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/myfirstiosapp/GTFrameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myfirstiosapp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
