@@ -17,20 +17,24 @@ PODS:
   - SDWebImage (5.18.9):
     - SDWebImage/Core (= 5.18.9)
   - SDWebImage/Core (5.18.9)
+  - TencentOpenAPI (1.0.0)
 
 DEPENDENCIES:
   - AFNetworking
   - SDWebImage
+  - TencentOpenAPI
 
 SPEC REPOS:
   trunk:
     - AFNetworking
     - SDWebImage
+    - TencentOpenAPI
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
   SDWebImage: 5e9b5f18ce88146692b1a5c174858948c84ff237
+  TencentOpenAPI: ddc6fb0134b25c9078ccd27fd2259ed0cc30a49a
 
-PODFILE CHECKSUM: bb9a2bd7f8c5c064a8990b11645798d4c5df5f55
+PODFILE CHECKSUM: b2de6ba9c16497ce1d6860265064569474f91e21
 
 COCOAPODS: 1.11.3

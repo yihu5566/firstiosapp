@@ -11,13 +11,13 @@
 		D60D7F072B959B8500C495C0 /* DFMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D7F062B959B8500C495C0 /* DFMediator.m */; };
 		D642D00C2B5FA38500E5DA6E /* DFVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D642D00B2B5FA38500E5DA6E /* DFVideoPlayer.m */; };
 		D642D00F2B5FBD7600E5DA6E /* DFVideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D642D00E2B5FBD7600E5DA6E /* DFVideoToolBar.m */; };
-		D64740502BA18256001900B2 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D647404F2BA18256001900B2 /* TencentOpenAPI.framework */; };
 		D64740542BA183CF001900B2 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D64740532BA183CF001900B2 /* MineViewController.m */; };
 		D64740572BA1A6E0001900B2 /* GTLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = D64740562BA1A6E0001900B2 /* GTLogin.m */; };
 		D6700CDD2B81E18A0060ABD0 /* DFSplash.m in Sources */ = {isa = PBXBuildFile; fileRef = D6700CDC2B81E18A0060ABD0 /* DFSplash.m */; };
 		D68847672B39657B0029D0C0 /* GTScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D68847662B39657B0029D0C0 /* GTScreen.m */; };
 		D688476A2B3A6CA40029D0C0 /* DFListLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = D68847692B3A6CA40029D0C0 /* DFListLoader.m */; };
 		D688476E2B3ACC6C0029D0C0 /* DFListItemBean.m in Sources */ = {isa = PBXBuildFile; fileRef = D688476D2B3ACC6C0029D0C0 /* DFListItemBean.m */; };
+		D68913F52BA2E13700E7F442 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68913F42BA2E13700E7F442 /* SystemConfiguration.framework */; };
 		D6EBC7A42B2FF53D00A71CCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7A32B2FF53D00A71CCF /* AppDelegate.m */; };
 		D6EBC7A72B2FF53D00A71CCF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7A62B2FF53D00A71CCF /* SceneDelegate.m */; };
 		D6EBC7AA2B2FF53D00A71CCF /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7A92B2FF53D00A71CCF /* NewsViewController.m */; };
@@ -43,7 +43,6 @@
 		D642D00B2B5FA38500E5DA6E /* DFVideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFVideoPlayer.m; sourceTree = "<group>"; };
 		D642D00D2B5FBD7600E5DA6E /* DFVideoToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFVideoToolBar.h; sourceTree = "<group>"; };
 		D642D00E2B5FBD7600E5DA6E /* DFVideoToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFVideoToolBar.m; sourceTree = "<group>"; };
-		D647404F2BA18256001900B2 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		D64740522BA183CF001900B2 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		D64740532BA183CF001900B2 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
 		D64740552BA1A6E0001900B2 /* GTLogin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTLogin.h; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		D68847692B3A6CA40029D0C0 /* DFListLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFListLoader.m; sourceTree = "<group>"; };
 		D688476C2B3ACC6C0029D0C0 /* DFListItemBean.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFListItemBean.h; sourceTree = "<group>"; };
 		D688476D2B3ACC6C0029D0C0 /* DFListItemBean.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFListItemBean.m; sourceTree = "<group>"; };
+		D68913F42BA2E13700E7F442 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D6EBC79F2B2FF53D00A71CCF /* myfirstiosapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myfirstiosapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6EBC7A22B2FF53D00A71CCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6EBC7A32B2FF53D00A71CCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -87,8 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D68913F52BA2E13700E7F442 /* SystemConfiguration.framework in Frameworks */,
 				90444C3C405D58B90AAC3978 /* libPods-myfirstiosapp.a in Frameworks */,
-				D64740502BA18256001900B2 /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,14 +102,6 @@
 				A81181F5387893695DC24316 /* Pods-myfirstiosapp.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		D647404E2BA181E1001900B2 /* GTFrameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D647404F2BA18256001900B2 /* TencentOpenAPI.framework */,
-			);
-			path = GTFrameworks;
 			sourceTree = "<group>";
 		};
 		D64740512BA18385001900B2 /* MineController */ = {
@@ -165,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				D64740512BA18385001900B2 /* MineController */,
-				D647404E2BA181E1001900B2 /* GTFrameworks */,
 				D68847642B39653F0029D0C0 /* Utils */,
 				D6EBC7CA2B30456900A71CCF /* RecommendController */,
 				D6EBC7C32B3023EE00A71CCF /* VideoController */,
@@ -238,6 +229,7 @@
 		E690E1884DE58597C109DB4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D68913F42BA2E13700E7F442 /* SystemConfiguration.framework */,
 				1FAE72776744773991CA576C /* libPods-myfirstiosapp.a */,
 			);
 			name = Frameworks;
@@ -524,6 +516,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/myfirstiosapp/GTFrameworks",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/myfirstiosapp",
+					"$(PROJECT_DIR)/myfirstiosapp/TencentOpenApi(Lite)_3.5.15.353",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myfirstiosapp/Info.plist;
@@ -537,6 +532,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"ImageIO\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongfang.myfirstiosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -560,6 +563,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/myfirstiosapp/GTFrameworks",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/myfirstiosapp",
+					"$(PROJECT_DIR)/myfirstiosapp/TencentOpenApi(Lite)_3.5.15.353",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = myfirstiosapp/Info.plist;
@@ -573,6 +579,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"ImageIO\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dongfang.myfirstiosapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
