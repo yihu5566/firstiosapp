@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90444C3C405D58B90AAC3978 /* libPods-myfirstiosapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAE72776744773991CA576C /* libPods-myfirstiosapp.a */; };
+		D60424D02BA9925E0083B4D9 /* GTLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = D60424CF2BA9925E0083B4D9 /* GTLocation.m */; };
 		D60D7F072B959B8500C495C0 /* DFMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = D60D7F062B959B8500C495C0 /* DFMediator.m */; };
 		D642D00C2B5FA38500E5DA6E /* DFVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D642D00B2B5FA38500E5DA6E /* DFVideoPlayer.m */; };
 		D642D00F2B5FBD7600E5DA6E /* DFVideoToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D642D00E2B5FBD7600E5DA6E /* DFVideoToolBar.m */; };
@@ -37,6 +38,8 @@
 		1FAE72776744773991CA576C /* libPods-myfirstiosapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myfirstiosapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		358B8B8196D039E50B15F874 /* Pods-myfirstiosapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myfirstiosapp.debug.xcconfig"; path = "Target Support Files/Pods-myfirstiosapp/Pods-myfirstiosapp.debug.xcconfig"; sourceTree = "<group>"; };
 		A81181F5387893695DC24316 /* Pods-myfirstiosapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myfirstiosapp.release.xcconfig"; path = "Target Support Files/Pods-myfirstiosapp/Pods-myfirstiosapp.release.xcconfig"; sourceTree = "<group>"; };
+		D60424CE2BA9925E0083B4D9 /* GTLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTLocation.h; sourceTree = "<group>"; };
+		D60424CF2BA9925E0083B4D9 /* GTLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTLocation.m; sourceTree = "<group>"; };
 		D60D7F052B959B8500C495C0 /* DFMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFMediator.h; sourceTree = "<group>"; };
 		D60D7F062B959B8500C495C0 /* DFMediator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFMediator.m; sourceTree = "<group>"; };
 		D642D00A2B5FA38500E5DA6E /* DFVideoPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFVideoPlayer.h; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				D6700CDC2B81E18A0060ABD0 /* DFSplash.m */,
 				D60D7F052B959B8500C495C0 /* DFMediator.h */,
 				D60D7F062B959B8500C495C0 /* DFMediator.m */,
+				D60424CE2BA9925E0083B4D9 /* GTLocation.h */,
+				D60424CF2BA9925E0083B4D9 /* GTLocation.m */,
 			);
 			path = myfirstiosapp;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				D6EBC7C92B30455A00A71CCF /* RecommendViewController.m in Sources */,
 				D6EBC7CD2B31331800A71CCF /* NormalTableViewCell.m in Sources */,
 				D688476A2B3A6CA40029D0C0 /* DFListLoader.m in Sources */,
+				D60424D02BA9925E0083B4D9 /* GTLocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

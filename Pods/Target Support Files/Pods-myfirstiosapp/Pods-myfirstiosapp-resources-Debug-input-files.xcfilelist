@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-myfirstiosapp/Pods-myfirstiosapp-resources.sh
+${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjackPrivacy.bundle
 ${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle
 ${PODS_ROOT}/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle
