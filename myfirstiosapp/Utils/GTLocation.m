@@ -39,9 +39,10 @@
 - (void)checkLocationAuthorization {
     
     //判断系统是否开启
-//    if (![CLLocationManager locationServicesEnabled]) {
-//        //  pop dialog tip
-//    }
+    if (![CLLocationManager locationServicesEnabled]) {
+        //  pop dialog tip
+        
+    }
 
     if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
         [self.manager requestWhenInUseAuthorization];

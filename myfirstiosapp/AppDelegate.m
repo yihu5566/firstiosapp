@@ -13,6 +13,7 @@
 #import "VideoViewController.h"
 #import "MineViewController.h"
 #import "GTLocation.h"
+#import "GTNotification.h"
 
 @interface AppDelegate ()
 
@@ -41,13 +42,13 @@
 
     self.window.rootViewController = uiNavigationController1;
     [self.window makeKeyAndVisible];
-//    [self.window addSubview:({
-//        DFSplash *splash = [[DFSplash alloc]initWithFrame:self.window.bounds];
-//        splash;
-//    })];
+    [self.window addSubview:({
+        DFSplash *splash = [[DFSplash alloc]initWithFrame:self.window.bounds];
+        splash;
+    })];
     
     [[GTLocation locationManage] checkLocationAuthorization];
-    
+    [[GTNotification notificationManager]checkNotificationAuthorization];
     return YES;
 }
 
