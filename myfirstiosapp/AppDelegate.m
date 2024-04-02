@@ -7,15 +7,15 @@
 
 #import "AppDelegate.h"
 #import "DFSplash.h"
+#import "GTLocation.h"
+#import "GTNotification.h"
+#import "MineViewController.h"
 #import "NewsViewController.h"
 #import "RecommendViewController.h"
 #import "SceneDelegate.h"
 #import "VideoViewController.h"
-#import "MineViewController.h"
-#import "GTLocation.h"
-#import "GTNotification.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<UITabBarControllerDelegate>
 
 @end
 
@@ -35,8 +35,10 @@
     RecommendViewController *recommendController = [[RecommendViewController alloc]init];
 
     MineViewController *mineViewController = [[MineViewController alloc]init];
-    
+
     [tabBarController setViewControllers:@[viewController, videoController, recommendController, mineViewController]];
+
+    tabBarController.delegate = self;
 
     UINavigationController *uiNavigationController1 =  [[UINavigationController alloc]initWithRootViewController:tabBarController];
 
@@ -46,12 +48,26 @@
         DFSplash *splash = [[DFSplash alloc]initWithFrame:self.window.bounds];
         splash;
     })];
-    
+
     [[GTLocation locationManage] checkLocationAuthorization];
     [[GTNotification notificationManager]checkNotificationAuthorization];
     return YES;
 }
 
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    NSLog(@"didSelectViewController");
+    [self _changeIcon];
+}
+
+#pragma mark - change icon
+- (void)_changeIcon {
+    if ([UIApplication sharedApplication].supportsAlternateIcons) {
+        [[UIApplication sharedApplication] setAlternateIconName:@"ICONBLACK"
+                                              completionHandler:^(NSError *_Nullable error) {
+            NSLog(@"");
+        }];
+    }
+}
 
 //#pragma mark - UISceneSession lifecycle
 //

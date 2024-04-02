@@ -74,7 +74,16 @@
 
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler{
-    completionHandler();
+    
+    [center setBadgeCount:5 withCompletionHandler:^(NSError * _Nullable error) {
+        if (error) {
+            // Handle error
+            NSLog(@"Error setting badge count: %@", error);
+        } else {
+            // Badge count set successfully
+            NSLog(@"Badge count set successfully");
+        }
+    }];    completionHandler();
 }
 
 @end

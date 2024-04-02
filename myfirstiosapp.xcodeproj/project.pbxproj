@@ -33,6 +33,7 @@
 		D6EBC7E62B328B4600A71CCF /* NewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7E52B328B4600A71CCF /* NewsDetailsViewController.m */; };
 		D6EBC7E92B32C4BE00A71CCF /* DFDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */; };
 		D6F0C5C52B4FE4BA00D3360D /* DFVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F0C5C42B4FE4BA00D3360D /* DFVideoCoverView.m */; };
+		D6F7E9AC2BBBCDFE007873CE /* ICONBLACK.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F7E9AB2BBBCDFE007873CE /* ICONBLACK.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFDeleteCellView.m; sourceTree = "<group>"; };
 		D6F0C5C32B4FE4BA00D3360D /* DFVideoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFVideoCoverView.h; sourceTree = "<group>"; };
 		D6F0C5C42B4FE4BA00D3360D /* DFVideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFVideoCoverView.m; sourceTree = "<group>"; };
+		D6F7E9AB2BBBCDFE007873CE /* ICONBLACK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICONBLACK.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		D6EBC7A12B2FF53D00A71CCF /* myfirstiosapp */ = {
 			isa = PBXGroup;
 			children = (
+				D6F7E9AA2BBBCDCC007873CE /* AlternateIcons */,
 				D64740512BA18385001900B2 /* MineController */,
 				D68847642B39653F0029D0C0 /* Utils */,
 				D6EBC7CA2B30456900A71CCF /* RecommendController */,
@@ -234,6 +237,14 @@
 				D6EBC7E52B328B4600A71CCF /* NewsDetailsViewController.m */,
 			);
 			path = NewsDetails;
+			sourceTree = "<group>";
+		};
+		D6F7E9AA2BBBCDCC007873CE /* AlternateIcons */ = {
+			isa = PBXGroup;
+			children = (
+				D6F7E9AB2BBBCDFE007873CE /* ICONBLACK.png */,
+			);
+			path = AlternateIcons;
 			sourceTree = "<group>";
 		};
 		E690E1884DE58597C109DB4F /* Frameworks */ = {
@@ -306,6 +317,7 @@
 			files = (
 				D6EBC7BD2B2FF87600A71CCF /* icon.bundle in Resources */,
 				D6EBC7AF2B2FF53F00A71CCF /* Assets.xcassets in Resources */,
+				D6F7E9AC2BBBCDFE007873CE /* ICONBLACK.png in Resources */,
 				D6EBC7AD2B2FF53D00A71CCF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -539,6 +551,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -586,6 +599,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

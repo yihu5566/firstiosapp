@@ -34,7 +34,11 @@ static inline NSInteger UIAdapter (float x){
 }
 
 //...完善其他方法..size..rect..origin..
-static inline CGRect UIRectAdapter(x,y,width,height){
+static inline CGRect UIRectAdapter(x,y,width,height)  int height;
+int width;
+int x;
+int y;
+{
     return CGRectMake(UIAdapter(x), UIAdapter(y), UIAdapter(width), UIAdapter(height));
 }
 
