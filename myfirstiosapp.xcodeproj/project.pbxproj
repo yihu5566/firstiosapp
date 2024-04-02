@@ -34,7 +34,37 @@
 		D6EBC7E92B32C4BE00A71CCF /* DFDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */; };
 		D6F0C5C52B4FE4BA00D3360D /* DFVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F0C5C42B4FE4BA00D3360D /* DFVideoCoverView.m */; };
 		D6F7E9AC2BBBCDFE007873CE /* ICONBLACK.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F7E9AB2BBBCDFE007873CE /* ICONBLACK.png */; };
+		D6F7E9CE2BBBE8CE007873CE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F7E9B22BBBE5FA007873CE /* WidgetKit.framework */; };
+		D6F7E9CF2BBBE8CE007873CE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F7E9B42BBBE5FA007873CE /* SwiftUI.framework */; };
+		D6F7E9D22BBBE8CE007873CE /* GTTodayBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7E9D12BBBE8CE007873CE /* GTTodayBundle.swift */; };
+		D6F7E9D42BBBE8CE007873CE /* GTToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7E9D32BBBE8CE007873CE /* GTToday.swift */; };
+		D6F7E9D62BBBE8D1007873CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F7E9D52BBBE8D1007873CE /* Assets.xcassets */; };
+		D6F7E9DA2BBBE8D1007873CE /* GTTodayExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D6F7E9CD2BBBE8CE007873CE /* GTTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6F7E9D82BBBE8D1007873CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6EBC7972B2FF53D00A71CCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D6F7E9CC2BBBE8CE007873CE;
+			remoteInfo = GTTodayExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D6F7E9C82BBBE5FC007873CE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D6F7E9DA2BBBE8D1007873CE /* GTTodayExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1FAE72776744773991CA576C /* libPods-myfirstiosapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myfirstiosapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +118,15 @@
 		D6F0C5C32B4FE4BA00D3360D /* DFVideoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFVideoCoverView.h; sourceTree = "<group>"; };
 		D6F0C5C42B4FE4BA00D3360D /* DFVideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFVideoCoverView.m; sourceTree = "<group>"; };
 		D6F7E9AB2BBBCDFE007873CE /* ICONBLACK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICONBLACK.png; sourceTree = "<group>"; };
+		D6F7E9B22BBBE5FA007873CE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		D6F7E9B42BBBE5FA007873CE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		D6F7E9CD2BBBE8CE007873CE /* GTTodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GTTodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F7E9D12BBBE8CE007873CE /* GTTodayBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTTodayBundle.swift; sourceTree = "<group>"; };
+		D6F7E9D32BBBE8CE007873CE /* GTToday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTToday.swift; sourceTree = "<group>"; };
+		D6F7E9D52BBBE8D1007873CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6F7E9D72BBBE8D1007873CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6F7E9DE2BBBEC07007873CE /* myfirstiosapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myfirstiosapp.entitlements; sourceTree = "<group>"; };
+		D6F7E9DF2BBBEC13007873CE /* GTTodayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GTTodayExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +136,15 @@
 			files = (
 				D68913F52BA2E13700E7F442 /* SystemConfiguration.framework in Frameworks */,
 				90444C3C405D58B90AAC3978 /* libPods-myfirstiosapp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F7E9CA2BBBE8CE007873CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F7E9CF2BBBE8CE007873CE /* SwiftUI.framework in Frameworks */,
+				D6F7E9CE2BBBE8CE007873CE /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +200,9 @@
 		D6EBC7962B2FF53D00A71CCF = {
 			isa = PBXGroup;
 			children = (
+				D6F7E9DF2BBBEC13007873CE /* GTTodayExtension.entitlements */,
 				D6EBC7A12B2FF53D00A71CCF /* myfirstiosapp */,
+				D6F7E9D02BBBE8CE007873CE /* GTToday */,
 				D6EBC7A02B2FF53D00A71CCF /* Products */,
 				AD903D9A1CF57D410D7F8AA3 /* Pods */,
 				E690E1884DE58597C109DB4F /* Frameworks */,
@@ -163,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				D6EBC79F2B2FF53D00A71CCF /* myfirstiosapp.app */,
+				D6F7E9CD2BBBE8CE007873CE /* GTTodayExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +221,7 @@
 		D6EBC7A12B2FF53D00A71CCF /* myfirstiosapp */ = {
 			isa = PBXGroup;
 			children = (
+				D6F7E9DE2BBBEC07007873CE /* myfirstiosapp.entitlements */,
 				D6F7E9AA2BBBCDCC007873CE /* AlternateIcons */,
 				D64740512BA18385001900B2 /* MineController */,
 				D68847642B39653F0029D0C0 /* Utils */,
@@ -247,11 +299,24 @@
 			path = AlternateIcons;
 			sourceTree = "<group>";
 		};
+		D6F7E9D02BBBE8CE007873CE /* GTToday */ = {
+			isa = PBXGroup;
+			children = (
+				D6F7E9D12BBBE8CE007873CE /* GTTodayBundle.swift */,
+				D6F7E9D32BBBE8CE007873CE /* GTToday.swift */,
+				D6F7E9D52BBBE8D1007873CE /* Assets.xcassets */,
+				D6F7E9D72BBBE8D1007873CE /* Info.plist */,
+			);
+			path = GTToday;
+			sourceTree = "<group>";
+		};
 		E690E1884DE58597C109DB4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				D68913F42BA2E13700E7F442 /* SystemConfiguration.framework */,
 				1FAE72776744773991CA576C /* libPods-myfirstiosapp.a */,
+				D6F7E9B22BBBE5FA007873CE /* WidgetKit.framework */,
+				D6F7E9B42BBBE5FA007873CE /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -268,15 +333,34 @@
 				D6EBC79C2B2FF53D00A71CCF /* Frameworks */,
 				D6EBC79D2B2FF53D00A71CCF /* Resources */,
 				BBCB5663A0D4A8402B02C137 /* [CP] Copy Pods Resources */,
+				D6F7E9C82BBBE5FC007873CE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D6F7E9D92BBBE8D1007873CE /* PBXTargetDependency */,
 			);
 			name = myfirstiosapp;
 			productName = myfirstiosapp;
 			productReference = D6EBC79F2B2FF53D00A71CCF /* myfirstiosapp.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D6F7E9CC2BBBE8CE007873CE /* GTTodayExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6F7E9DB2BBBE8D1007873CE /* Build configuration list for PBXNativeTarget "GTTodayExtension" */;
+			buildPhases = (
+				D6F7E9C92BBBE8CE007873CE /* Sources */,
+				D6F7E9CA2BBBE8CE007873CE /* Frameworks */,
+				D6F7E9CB2BBBE8CE007873CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTTodayExtension;
+			productName = GTTodayExtension;
+			productReference = D6F7E9CD2BBBE8CE007873CE /* GTTodayExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -285,10 +369,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					D6EBC79E2B2FF53D00A71CCF = {
 						CreatedOnToolsVersion = 15.1;
+					};
+					D6F7E9CC2BBBE8CE007873CE = {
+						CreatedOnToolsVersion = 15.3;
 					};
 				};
 			};
@@ -306,6 +394,7 @@
 			projectRoot = "";
 			targets = (
 				D6EBC79E2B2FF53D00A71CCF /* myfirstiosapp */,
+				D6F7E9CC2BBBE8CE007873CE /* GTTodayExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -319,6 +408,14 @@
 				D6EBC7AF2B2FF53F00A71CCF /* Assets.xcassets in Resources */,
 				D6F7E9AC2BBBCDFE007873CE /* ICONBLACK.png in Resources */,
 				D6EBC7AD2B2FF53D00A71CCF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6F7E9CB2BBBE8CE007873CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F7E9D62BBBE8D1007873CE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +492,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6F7E9C92BBBE8CE007873CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6F7E9D42BBBE8CE007873CE /* GTToday.swift in Sources */,
+				D6F7E9D22BBBE8CE007873CE /* GTTodayBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6F7E9D92BBBE8D1007873CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D6F7E9CC2BBBE8CE007873CE /* GTTodayExtension */;
+			targetProxy = D6F7E9D82BBBE8D1007873CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D6EBC7AB2B2FF53D00A71CCF /* Main.storyboard */ = {
@@ -529,10 +643,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 358B8B8196D039E50B15F874 /* Pods-myfirstiosapp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = myfirstiosapp/myfirstiosapp.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -577,10 +693,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A81181F5387893695DC24316 /* Pods-myfirstiosapp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = myfirstiosapp/myfirstiosapp.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
@@ -621,6 +739,69 @@
 			};
 			name = Release;
 		};
+		D6F7E9DC2BBBE8D1007873CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = GTTodayExtension.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GTToday/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GTToday;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongfang.myfirstiosapp.GTToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D6F7E9DD2BBBE8D1007873CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = GTTodayExtension.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GTToday/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GTToday;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dongfang.myfirstiosapp.GTToday;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -638,6 +819,15 @@
 			buildConfigurations = (
 				D6EBC7B92B2FF53F00A71CCF /* Debug */,
 				D6EBC7BA2B2FF53F00A71CCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6F7E9DB2BBBE8D1007873CE /* Build configuration list for PBXNativeTarget "GTTodayExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6F7E9DC2BBBE8D1007873CE /* Debug */,
+				D6F7E9DD2BBBE8D1007873CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
