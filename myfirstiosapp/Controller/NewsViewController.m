@@ -9,6 +9,8 @@
 #import "DFListItemBean.h"
 #import "DFListLoader.h"
 #import "DFMediator.h"
+#import "GTScreen.h"
+#import "GTSearchBar.h"
 #import "NewsViewController.h"
 #import "NormalTableViewCell.h"
 
@@ -65,6 +67,16 @@
 //    [view1 addGestureRecognizer:tapGesture];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.barTintColor = [UIColor redColor];
+    [self.tabBarController.navigationItem setTitleView:({
+        GTSearchBar *searcherBar = [[GTSearchBar alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH - UI(20), self.navigationController.navigationBar.bounds.size.height)];
+
+        searcherBar;
+    })];
+}
+
 // pargma mark - UITableViewDeleggate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -73,8 +85,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     DFListItemBean *item = [self.dataArray objectAtIndex:indexPath.row];
-    
-   __kindof UIViewController *viewCon =  [DFMediator detailViewControllerWithUrl:item.link];
+
+    __kindof UIViewController *viewCon =  [DFMediator detailViewControllerWithUrl:item.link];
 
     viewCon.view.backgroundColor = [UIColor whiteColor];
     viewCon.navigationItem.title = [NSString stringWithFormat:@"我是标题-%@", @(indexPath.row)];

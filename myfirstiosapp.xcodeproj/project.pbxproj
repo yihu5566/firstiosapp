@@ -40,6 +40,7 @@
 		D6F7E9D42BBBE8CE007873CE /* GTToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F7E9D32BBBE8CE007873CE /* GTToday.swift */; };
 		D6F7E9D62BBBE8D1007873CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6F7E9D52BBBE8D1007873CE /* Assets.xcassets */; };
 		D6F7E9DA2BBBE8D1007873CE /* GTTodayExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D6F7E9CD2BBBE8CE007873CE /* GTTodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D6F7E9E42BBBF38A007873CE /* GTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F7E9E32BBBF38A007873CE /* GTSearchBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,8 @@
 		D6F7E9D72BBBE8D1007873CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6F7E9DE2BBBEC07007873CE /* myfirstiosapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myfirstiosapp.entitlements; sourceTree = "<group>"; };
 		D6F7E9DF2BBBEC13007873CE /* GTTodayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GTTodayExtension.entitlements; sourceTree = "<group>"; };
+		D6F7E9E22BBBF38A007873CE /* GTSearchBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTSearchBar.h; sourceTree = "<group>"; };
+		D6F7E9E32BBBF38A007873CE /* GTSearchBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTSearchBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,14 +249,10 @@
 		D6EBC7BE2B300F1B00A71CCF /* NewsController */ = {
 			isa = PBXGroup;
 			children = (
+				D6F7E9E12BBBEF54007873CE /* Controller */,
+				D6F7E9E02BBBEF2A007873CE /* View */,
 				D688476B2B3ACC160029D0C0 /* Model */,
 				D6EBC7E22B328B0000A71CCF /* NewsDetails */,
-				D6EBC7A82B2FF53D00A71CCF /* NewsViewController.h */,
-				D6EBC7A92B2FF53D00A71CCF /* NewsViewController.m */,
-				D6EBC7CB2B31331800A71CCF /* NormalTableViewCell.h */,
-				D6EBC7CC2B31331800A71CCF /* NormalTableViewCell.m */,
-				D6EBC7E72B32C4BE00A71CCF /* DFDeleteCellView.h */,
-				D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */,
 			);
 			name = NewsController;
 			sourceTree = "<group>";
@@ -308,6 +307,28 @@
 				D6F7E9D72BBBE8D1007873CE /* Info.plist */,
 			);
 			path = GTToday;
+			sourceTree = "<group>";
+		};
+		D6F7E9E02BBBEF2A007873CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6EBC7CB2B31331800A71CCF /* NormalTableViewCell.h */,
+				D6EBC7CC2B31331800A71CCF /* NormalTableViewCell.m */,
+				D6EBC7E72B32C4BE00A71CCF /* DFDeleteCellView.h */,
+				D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */,
+				D6F7E9E22BBBF38A007873CE /* GTSearchBar.h */,
+				D6F7E9E32BBBF38A007873CE /* GTSearchBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6F7E9E12BBBEF54007873CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6EBC7A82B2FF53D00A71CCF /* NewsViewController.h */,
+				D6EBC7A92B2FF53D00A71CCF /* NewsViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		E690E1884DE58597C109DB4F /* Frameworks */ = {
@@ -480,6 +501,7 @@
 				D6EBC7C52B30250400A71CCF /* VideoViewController.m in Sources */,
 				D6EBC7AA2B2FF53D00A71CCF /* NewsViewController.m in Sources */,
 				D6EBC7A42B2FF53D00A71CCF /* AppDelegate.m in Sources */,
+				D6F7E9E42BBBF38A007873CE /* GTSearchBar.m in Sources */,
 				D642D00F2B5FBD7600E5DA6E /* DFVideoToolBar.m in Sources */,
 				D6700CDD2B81E18A0060ABD0 /* DFSplash.m in Sources */,
 				D6EBC7B52B2FF53F00A71CCF /* main.m in Sources */,
