@@ -33,6 +33,7 @@
 		D6EBC7E62B328B4600A71CCF /* NewsDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7E52B328B4600A71CCF /* NewsDetailsViewController.m */; };
 		D6EBC7E92B32C4BE00A71CCF /* DFDeleteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */; };
 		D6F0C5C52B4FE4BA00D3360D /* DFVideoCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F0C5C42B4FE4BA00D3360D /* DFVideoCoverView.m */; };
+		D6F309112BD62A4100EEC3C2 /* GTCommentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F309102BD62A4100EEC3C2 /* GTCommentManager.m */; };
 		D6F7E9AC2BBBCDFE007873CE /* ICONBLACK.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F7E9AB2BBBCDFE007873CE /* ICONBLACK.png */; };
 		D6F7E9CE2BBBE8CE007873CE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F7E9B22BBBE5FA007873CE /* WidgetKit.framework */; };
 		D6F7E9CF2BBBE8CE007873CE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F7E9B42BBBE5FA007873CE /* SwiftUI.framework */; };
@@ -118,6 +119,8 @@
 		D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFDeleteCellView.m; sourceTree = "<group>"; };
 		D6F0C5C32B4FE4BA00D3360D /* DFVideoCoverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFVideoCoverView.h; sourceTree = "<group>"; };
 		D6F0C5C42B4FE4BA00D3360D /* DFVideoCoverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFVideoCoverView.m; sourceTree = "<group>"; };
+		D6F3090F2BD62A4100EEC3C2 /* GTCommentManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GTCommentManager.h; sourceTree = "<group>"; };
+		D6F309102BD62A4100EEC3C2 /* GTCommentManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GTCommentManager.m; sourceTree = "<group>"; };
 		D6F7E9AB2BBBCDFE007873CE /* ICONBLACK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ICONBLACK.png; sourceTree = "<group>"; };
 		D6F7E9B22BBBE5FA007873CE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D6F7E9B42BBBE5FA007873CE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -318,6 +321,8 @@
 				D6EBC7E82B32C4BE00A71CCF /* DFDeleteCellView.m */,
 				D6F7E9E22BBBF38A007873CE /* GTSearchBar.h */,
 				D6F7E9E32BBBF38A007873CE /* GTSearchBar.m */,
+				D6F3090F2BD62A4100EEC3C2 /* GTCommentManager.h */,
+				D6F309102BD62A4100EEC3C2 /* GTCommentManager.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -495,6 +500,7 @@
 				D64740542BA183CF001900B2 /* MineViewController.m in Sources */,
 				D642D00C2B5FA38500E5DA6E /* DFVideoPlayer.m in Sources */,
 				D688476E2B3ACC6C0029D0C0 /* DFListItemBean.m in Sources */,
+				D6F309112BD62A4100EEC3C2 /* GTCommentManager.m in Sources */,
 				D64740572BA1A6E0001900B2 /* GTLogin.m in Sources */,
 				D6F0C5C52B4FE4BA00D3360D /* DFVideoCoverView.m in Sources */,
 				D6EBC7E92B32C4BE00A71CCF /* DFDeleteCellView.m in Sources */,
